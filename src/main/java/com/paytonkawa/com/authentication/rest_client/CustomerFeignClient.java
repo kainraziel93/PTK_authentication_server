@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.paytonkawa.com.authentication.dto.CustomerResponse;
 import com.paytonkawa.com.authentication.dto.LoginRequest;
 
-@FeignClient(name="customer-service",url = "http://localhost:8080/customer")
+@FeignClient(name="customer-service",url = "${customer.service.host}")
 public interface CustomerFeignClient {
 
 	@PostMapping("customer_by_credentials")
