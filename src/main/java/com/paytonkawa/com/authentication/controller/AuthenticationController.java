@@ -20,7 +20,7 @@ public class AuthenticationController {
 	@Autowired
 	private AuthenticationServices authenticationServices;
 
-	@PostMapping("Authenticate")
+	@PostMapping("authenticate")
 	public ResponseEntity<String> authenticate( @RequestBody LoginRequest loginRequest){
 		return this.authenticationServices.authenticate(loginRequest);
 		
